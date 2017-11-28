@@ -47,6 +47,7 @@ def main():
             
         z = x + y
         print(z)
+        print("Thats it")
 
 if __name__ == "__main__":
 main()

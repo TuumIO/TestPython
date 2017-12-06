@@ -17,7 +17,7 @@ def main():
        global Action, x, y, z
 
        try:
-              opts, args = getopt.getopt(sys.argv[1:], "f:s:") # output=
+              opts, args = getopt.getopt(sys.argv[1:], "f:s:h") # output=
 
        except getopt.GetoptError as err:
               print("Error: "+str(err)+", Try --help for usage\n\n")

@@ -37,7 +37,7 @@ for o, a in opts:
                      #i = 1
                      while y < x:
                             direc = a + "." + str(y)
-                            response = os.system("ping " + ("-n 4 " if  platform.system().lower()=="windows" else "-c 4 ") + direc)
+                            response = os.system("ping -c 1 " + direc)
                             if response == 0:
                                    pingstatus = "Ususario Activo"
                                    resultados[y] = pingstatus

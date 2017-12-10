@@ -1,3 +1,3 @@
 import os, sys
-host = "8.8.8.8"
+host = "192.168.1.1"
 os.system("ping " + ("-n 1 " if  sys.platform().lower()=="win32" else "-c 1 ") + host)

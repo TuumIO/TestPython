@@ -34,7 +34,7 @@ for o, a in opts:
               try:
                      #i = 1
                      while y < x:
-                            direc = d + "." + str(y)
+                            direc = a + "." + str(y)
                             response = os.system("ping -c 1 " + direc)
                             if response == 0:
                                    pingstatus = "Ususario Activo"

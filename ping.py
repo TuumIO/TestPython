@@ -26,7 +26,7 @@ for o, a in opts:
        if o in ("-f"):
               x = a
        if o in ("-d"):
-              try:
+              #try:
                      y = a
                      i = 1
                      while i < x:
@@ -38,7 +38,7 @@ for o, a in opts:
                                    pingstatus = "Usuario no Activo"
                             print(direc + pingstatus)
                             i=i+1
-              except:
-                     print("Algo pasa aca\n")
-                     sys.exit(2)
+              #except:
+                     #print("Algo pasa aca\n")
+                     #sys.exit(2)
 print("Listo\n")

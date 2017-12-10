@@ -27,9 +27,10 @@ for o, a in opts:
               x = a
        if o in ("-d"):
               try:
+                     y = a
                      i = 1
                      while i < x:
-                            direc = a + "." + str(i)
+                            direc = y + "." + str(i)
                             response = os.system("ping -c 1 " + direc)
                             if response == 0:
                                    pingstatus = "Ususario Activo"
@@ -38,5 +39,6 @@ for o, a in opts:
                             print(direc + pingstatus)
                             i=i+1
               except:
+                     print("Algo pasa aca\n")
                      sys.exit(2)
 print("Listo\n")

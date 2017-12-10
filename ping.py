@@ -39,10 +39,9 @@ for o, a in opts:
                             else:
                                    resultados = {i:response}
                                    pingstatus = "Usuario no Activo"
-                            print(direc + " " + pingstatus)
+                            print(resultados[i])
                             i=i+1
               except:
                      print("Algo pasa aca\n")
                      sys.exit(2)
-print(resultados)
 print("Listo\n")

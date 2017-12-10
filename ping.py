@@ -34,15 +34,15 @@ for o, a in opts:
                             response = os.system("ping -c 1 " + direc)
                             if response == 0:
                                    pingstatus = "Ususario Activo"
+                                   resultados = {i,pingstatus}
                             else:
                                    pingstatus = "Usuario no Activo"
                             i=i+1
               except:
                      print("Algo pasa aca\n")
                      sys.exit(2)
-j = 0
+
 for j in resultados:
-       if resultados[j] == 0:
-              print("Usuario " + j + "Activo")
+       print("Usuario " + j + "Activo")
               
 print("Listo\n")

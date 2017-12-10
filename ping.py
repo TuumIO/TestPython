@@ -42,6 +42,6 @@ for o, a in opts:
                      print("Algo pasa aca\n")
                      sys.exit(2)
 
-for k, v in resultados.items():
+for k in resultados:
        print("Usuario: " + str(k) + " Activo\n")
 

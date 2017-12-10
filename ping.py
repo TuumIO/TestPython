@@ -14,7 +14,7 @@ def usage():
        print("-h info de ayuda")
 
 try:
-       opts, args = getopt.getopt(sys.argv[1:], "f:d:h")
+       opts, args = getopt.getopt(sys.argv[1:], "i:f:d:h")
 
 except getopt.GetoptError as err:
        print("Error: "+str(err)+", Intente -h para ayuda\n\n")

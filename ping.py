@@ -36,8 +36,5 @@ def main():
 
                         except:
                             sys.exit(2)
-
-        print("Listo!")
-
 if __name__ == "__main__":
 main()

@@ -1,6 +1,7 @@
 import os
 import sys
 import getopt
+from decimal import Decimal 
 
 resultados = {} #Diccionario donde se guardan los resultados
 
@@ -26,9 +27,9 @@ for o, a in opts:
               usage()
               sys.exit()
        if o in ("-i"):
-              y = float(a)
+              y = Decimal(a)
        if o in ("-f"):
-              x = float(a)
+              x = Decimal(a)
        if o in ("-d"):
               d = a
               try:

@@ -30,10 +30,11 @@ for o, a in opts:
        if o in ("-f"):
               x = float(a)
        if o in ("-d"):
+              d = a
               try:
                      #i = 1
                      while y < x:
-                            direc = a + "." + str(y)
+                            direc = d + "." + str(y)
                             response = os.system("ping -c 1 " + direc)
                             if response == 0:
                                    pingstatus = "Ususario Activo"
@@ -46,5 +47,5 @@ for o, a in opts:
                      sys.exit(2)
 
 for k in resultados:
-       print("Usuario: " + str(k) + " Activo\n")
+       print("Usuario: " + d + "." + str(k) + " Activo\n")
 

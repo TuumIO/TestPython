@@ -1,3 +1,8 @@
-import os, sys
-host = "192.168.1.1"
-os.system("ping " + ("-n 1 " if  sys.platform().lower()=="win32" else "-c 1 ") + host)
+import os
+hostname = "google.com"
+response = os.system("ping -c 1 " + hostname)
+if response == 0:
+    pingstatus = "Network Active"
+else:
+    pingstatus = "Network Error"
+print(pingstatus)

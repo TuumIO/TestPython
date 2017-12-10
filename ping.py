@@ -8,6 +8,7 @@ def usage():
        
        print("Uso: Ping")
        print("")
+       print("-i Inicio")
        print("-f Fin")
        print("-d Direccion")
        print("-h info de ayuda")
@@ -24,20 +25,22 @@ for o, a in opts:
        if o in ("-h"):
               usage()
               sys.exit()
+       if o in ("-i"):
+              y = float(a)
        if o in ("-f"):
               x = float(a)
        if o in ("-d"):
               try:
-                     i = 1
-                     while i < x:
-                            direc = a + "." + str(i)
+                     #i = 1
+                     while y < x:
+                            direc = a + "." + str(y)
                             response = os.system("ping -c 1 " + direc)
                             if response == 0:
                                    pingstatus = "Ususario Activo"
-                                   resultados[i] = pingstatus
+                                   resultados[y] = pingstatus
                             else:
                                    pingstatus = "Usuario no Activo"
-                            i=i+1
+                            y=y+1
               except:
                      print("Algo pasa aca\n")
                      sys.exit(2)

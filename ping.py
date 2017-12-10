@@ -10,8 +10,6 @@ def usage():
        print("-h info de ayuda")
 
 def main():
-       'Main function'
-       global Action, x, y, z
 
        try:
               opts, args = getopt.getopt(sys.argv[1:], "d:h")
@@ -36,5 +34,6 @@ def main():
 
                         except:
                             sys.exit(2)
+       print("Listo\n")
 if __name__ == "__main__":
-main()
+       main()

@@ -12,7 +12,6 @@ def usage():
        print("-d Direccion")
        print("-h info de ayuda")
 
-
 try:
        opts, args = getopt.getopt(sys.argv[1:], "f:d:h")
 
@@ -34,14 +33,16 @@ for o, a in opts:
                             direc = a + "." + str(i)
                             response = os.system("ping -c 1 " + direc)
                             if response == 0:
-                                   resultados = {i:response}
                                    pingstatus = "Ususario Activo"
                             else:
-                                   resultados = {i:response}
                                    pingstatus = "Usuario no Activo"
-                            print(resultados[i])
                             i=i+1
               except:
                      print("Algo pasa aca\n")
                      sys.exit(2)
+
+for i in resultados:
+       if resultados[i] == 0:
+              print("Usuario " + i + "Activo")
+              
 print("Listo\n")

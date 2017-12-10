@@ -35,7 +35,7 @@ for o, a in opts:
                             else:
                                    pingstatus = "Usuario no Activo"
                             print(a + pingstatus)
-                            i++
+                            i=i+1
               except:
                      sys.exit(2)
 print("Listo\n")

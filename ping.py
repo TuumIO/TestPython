@@ -27,14 +27,15 @@ for o, a in opts:
               x = a
        if o in ("-d"):
               try:
-                     for i < x:
+                     i = 1
+                     while i < x:
                             direc = a + "." + str(i)
                             response = os.system("ping -c 1 " + direc)
                             if response == 0:
                                    pingstatus = "Ususario Activo"
                             else:
                                    pingstatus = "Usuario no Activo"
-                            print(a + pingstatus)
+                            print(direc + pingstatus)
                             i=i+1
               except:
                      sys.exit(2)

@@ -34,7 +34,7 @@ for o, a in opts:
                             response = os.system("ping -c 1 " + direc)
                             if response == 0:
                                    pingstatus = "Ususario Activo"
-                                   resultados = {i,pingstatus}
+                                   resultados[i] = pingstatus
                             else:
                                    pingstatus = "Usuario no Activo"
                             i=i+1

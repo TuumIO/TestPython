@@ -24,13 +24,13 @@ for o, a in opts:
               sys.exit()
        if o in ("-d"):
               try:
-                     response = os.system("ping -c 1 " + hostname)
+                     response = os.system("ping -c 1 " + a)
                      if response == 0:
                             pingstatus = "Ususario Activo"
-                            print(pingstatus)
+                            print(a + pingstatus)
                      else:
                             pingstatus = "Usuario no Activo"
-                            print(pingstatus)
+                            print(a + pingstatus)
               except:
                      sys.exit(2)
 print("Listo\n")

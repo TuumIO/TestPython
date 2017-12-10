@@ -24,7 +24,7 @@ for o, a in opts:
               usage()
               sys.exit()
        if o in ("-f"):
-              x = dec(a)
+              x = float(a)
        if o in ("-d"):
               #try:
                      y = a

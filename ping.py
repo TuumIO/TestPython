@@ -40,9 +40,9 @@ for o, a in opts:
               except:
                      print("Algo pasa aca\n")
                      sys.exit(2)
-
-for i in resultados:
-       if resultados[i] == 0:
-              print("Usuario " + i + "Activo")
+j = 0
+for j in resultados:
+       if resultados[j] == 0:
+              print("Usuario " + j + "Activo")
               
 print("Listo\n")

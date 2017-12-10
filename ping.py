@@ -47,5 +47,5 @@ for o, a in opts:
                      sys.exit(2)
 
 for k in resultados:
-       print("Usuario: " + d + "." + str(k) + " Activo\n")
+       print("Usuario: " + d + "." + str(k) + " Activo")
 

@@ -43,6 +43,6 @@ for o, a in opts:
                      sys.exit(2)
 
 for j in resultados:
-       print("Usuario " + j + "Activo")
+       print("Usuario " + str(j) + "Activo")
               
 print("Listo\n")

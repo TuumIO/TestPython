@@ -1,9 +1,18 @@
+import RPi.GPIO as GPIO
+import time
 import os
 import sys
 import getopt
 from decimal import Decimal 
 
 resultados = {} #Diccionario donde se guardan los resultados
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+
+led = 16
+
+GPIO.setup(led, GPIO.OUT)
 
 def usage():
        

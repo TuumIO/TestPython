@@ -41,22 +41,19 @@ for o, a in opts:
               x = Decimal(a)
        if o in ("-d"):
               d = a
-              try:
-                     #i = 1
-                     while y < x:
-                            direc = a + "." + str(y)
-                            response = os.system("ping -c 1 " + direc)
-                            if response == 0:
-                                   pingstatus = "Ususario Activo"
-                                   resultados[y] = pingstatus
-                            else:
-                                   pingstatus = "Usuario no Activo"
-                            y=y+1
-              except:
-                     print("Algo pasa aca\n")
-                     sys.exit(2)
+while y <= x:
+       GPIO.output(led,1)
+       direc = a + "." + str(y)
+       response = os.system("ping -c 1 " + direc)
+       if response == 0:
+              pingstatus = "Ususario Activo"
+              resultados[y] = pingstatus
+       else:
+              pingstatus = "Usuario no Activo"
+       y=y+1
+GPIO.output(led,0)
 pinglog = open("pinglog.txt","a")
 for k in resultados:      
-       pinglog.write("Usuario: " + d + "." + str(k) + " Activo")
+       pinglog.write("Usuario: " + d + "." + str(k) + " Activo\n")
        #print("Usuario: " + d + "." + str(k) + " Activo")
 pinglog.close()

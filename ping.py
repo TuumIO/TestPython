@@ -47,7 +47,7 @@ for o, a in opts:
                      print("Algo pasa aca\n")
                      sys.exit(2)
 pinglog = open("pinglog.txt","a")
-for k in resultados:
-       pinglog.write(k)
+for k in resultados:      
+       pinglog.write("Usuario: " + d + "." + str(k) + " Activo")
        #print("Usuario: " + d + "." + str(k) + " Activo")
 pinglog.close()
